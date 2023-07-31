@@ -12,13 +12,14 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
-    User findByName(String name);
 
-    @Query("select u from User u where u.id <= ?1")
-    Page<User> findMore(Long maxId, Pageable pageable);
+  User findByName(String name);
 
-    @Modifying
-    @Transactional
-    @Query("update User u set u.name = ?1 where u.id = ?2")
-    int updateById(String name, Long id);
+  @Query("select u from User u where u.id <= ?1")
+  Page<User> findMore(Long maxId, Pageable pageable);
+
+  @Modifying
+  @Transactional
+  @Query("update User u set u.name = ?1 where u.id = ?2")
+  int updateById(String name, Long id);
 }
