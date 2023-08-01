@@ -20,9 +20,10 @@ Spring-SQLite是一个基于Spring Boot和SQLite的模板工程，旨在简化Sp
 
 ### 获取代码
 
-您可以通过以下命令将项目克隆到本地：
+您可以通过以下命令将项目克隆到本地，并构建：
 
 ```bash
 git clone https://github.com/zengdan/spring-sqlite.git
 cd spring-sqlite
+mvn clean install
 
